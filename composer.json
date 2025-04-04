@@ -1,14 +1,14 @@
 {
-    "name": "joshbrw/laravel-module-installer",
+    "name": "v360tech/laravel-module-installer",
     "type": "composer-plugin",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Joshbrw\\LaravelModuleInstaller\\": "src/"
+            "V360Tech\\LaravelModuleInstaller\\": "src/"
         }
     },
     "extra": {
-        "class": "Joshbrw\\LaravelModuleInstaller\\LaravelModuleInstallerPlugin"
+        "class": "V360Tech\\LaravelModuleInstaller\\LaravelModuleInstallerPlugin"
     },
     "require-dev": {
         "composer/composer": "^2.0",

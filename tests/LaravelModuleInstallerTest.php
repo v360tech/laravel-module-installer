@@ -5,8 +5,8 @@ use PHPUnit\Framework\TestCase;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\PackageInterface;
-use Joshbrw\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
-use Joshbrw\LaravelModuleInstaller\LaravelModuleInstaller;
+use V360Tech\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
+use V360Tech\LaravelModuleInstaller\LaravelModuleInstaller;
 
 class LaravelModuleInstallerTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Joshbrw\LaravelModuleInstaller\Exceptions;
+namespace V360Tech\LaravelModuleInstaller\Exceptions;
 
 use Exception;
 

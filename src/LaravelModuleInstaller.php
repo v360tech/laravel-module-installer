@@ -1,10 +1,10 @@
 <?php
 
-namespace Joshbrw\LaravelModuleInstaller;
+namespace V360Tech\LaravelModuleInstaller;
 
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
-use Joshbrw\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
+use V360Tech\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
 
 class LaravelModuleInstaller extends LibraryInstaller
 {
@@ -40,7 +40,7 @@ class LaravelModuleInstaller extends LibraryInstaller
     }
 
     /**
-     * Get the module name, i.e. "joshbrw/something-module" will be transformed into "Something"
+     * Get the module name, i.e. "v360tech/something-module" will be transformed into "Something"
      *
      * @param PackageInterface $package Compose Package Interface
      *
@@ -50,6 +50,13 @@ class LaravelModuleInstaller extends LibraryInstaller
      */
     protected function getModuleName(PackageInterface $package)
     {
+        //try to extract module name from the package info
+        $extra = $package->getExtra();
+        if ($extra && isset($extra['module-name'])) {
+            return $extra['module-name'];
+        }
+
+        //extract name from the package name
         $name = $package->getPrettyName();
         $split = explode("/", $name);
 
